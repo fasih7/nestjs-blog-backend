@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { PostModule } from './post/post.module';
+import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
+import { BlogsModule } from './blogs/blogs.module';
 import appConfigs from './config/app.config';
 
 @Module({
@@ -17,7 +19,9 @@ import appConfigs from './config/app.config';
       }),
       inject: [ConfigService],
     }),
-    PostModule,
+    AuthModule,
+    UserModule,
+    BlogsModule,
   ],
 })
 export class AppModule {}

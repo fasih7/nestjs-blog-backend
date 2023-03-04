@@ -8,8 +8,8 @@ export default registerAs(
       //TODO: change 8081 to 3000 as dev server is using port 3000
       port: parseInt(process.env.PORT) || 3030,
     },
-    mongoUri:
-      process.env.MONGODB_CONNECTION_STRING ||
-      'mongodb+srv://Blogger:nGSHqY1znr4EuKnA@blogger.jvaggcb.mongodb.net/?retryWrites=true&w=majority',
+    mongoUri: process.env.MONGODB_CONNECTION_STRING,
+    // 'mongodb+srv://Blogger:nGSHqY1znr4EuKnA@blogger.jvaggcb.mongodb.net/?retryWrites=true&w=majority',
+    // jwtSecretKey: process.env.JWT_SECRET_KEY,
   }),
 );
